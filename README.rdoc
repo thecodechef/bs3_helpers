@@ -1,3 +1,0 @@
-= Bs3Helpers
-
-This project rocks and uses MIT-LICENSE.
