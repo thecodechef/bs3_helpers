@@ -19,5 +19,5 @@ task :release => :build do
 end 
 
 task :update do
-  system "git pull -u origin master"
+  system "git pull origin master"
 end
