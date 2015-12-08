@@ -23,9 +23,8 @@ module Bs3Helpers
 					@classes << @col_md_12
 					@classes << @col_lg_12
 					@classes << @col_xl_12
+					content_tag :div,'',class: @classes.join(' '),&block
 				end
-
-				content_tag :div,'',class: @classes.join(' '),&block
 			end
 		end
 	end
