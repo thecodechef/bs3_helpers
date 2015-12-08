@@ -1,4 +1,7 @@
 
+## 0.0.5
+ * Update .gitignore
+
 ## 0.0.4
  * Updated Rakefile
 
