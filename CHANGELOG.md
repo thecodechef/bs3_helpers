@@ -1,4 +1,11 @@
 
+## 0.0.7
+ * Fixed some build issues
+
+## 0.0.6
+ * Updated Rakefile
+ * Added Messages System
+
 ## 0.0.5
  * Update .gitignore
 
