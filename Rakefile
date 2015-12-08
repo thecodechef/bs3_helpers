@@ -14,7 +14,7 @@ end
 
 task :release => :build do  
   system "gem push bs3_helpers-#{Bs3Helpers::VERSION}.gem"
-  system "git tag -a v#{Bs3Helpers::VERSION} -m '#{Bs3Helpers::Messages::Commits.join('\n')}'"
+  system "git tag -a v#{Bs3Helpers::VERSION} -m '#{Bs3Helpers::Messages::Commits.join("\n")}'"
   system "git push -u origin master --tags"
 end 
 
