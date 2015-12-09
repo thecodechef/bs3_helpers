@@ -21,3 +21,5 @@ end
 task :update do
   system "git pull origin master"
 end
+
+task default: :release
