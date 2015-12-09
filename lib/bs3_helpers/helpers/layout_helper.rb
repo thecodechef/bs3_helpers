@@ -19,11 +19,19 @@ module Bs3Helpers
 				@classes = []
 				
 				if opts[:full]
-					@classes << instance_variable_get("@col_#{s}_#{i}") if opts[:size] == @sizes.fetch(i).to_sym 
+					@classes << @col_xs_12 
 					@classes << @col_sm_12 
 					@classes << @col_md_12
 					@classes << @col_lg_12
 					@classes << @col_xl_12
+					content_tag :div,'',class: @classes.join(' '),&block
+				end
+
+				if opts[:span] < 1 && opts[:size] =~ /(xs|sm|md|lg|xl)/
+					@classes << instance_variable_get("@col_#{opts[:size].to_s}_0")
+					content_tag :div,'',class: @classes.join(' '),&block
+				elsif opts[:span] >= 1 && opts[:size] =~ /(xs|sm|md|lg|xl)/
+					@classes << instance_variable_get("@col_#{opts[:size].to_s}_#{opts[:span].to_s}")
 					content_tag :div,'',class: @classes.join(' '),&block
 				end
 
