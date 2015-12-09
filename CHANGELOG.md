@@ -1,4 +1,6 @@
 
+## 0.0.9
+ * Updated Rakefile
 ## 0.0.8
  * Removed Documentation for Messages.
 
