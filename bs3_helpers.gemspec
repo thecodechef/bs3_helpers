@@ -6,7 +6,7 @@ require "bs3_helpers/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "bs3_helpers"
-  s.version     = Bs3Helpers::VERSION
+  s.version     = Bs3Helpers.version
   s.authors     = ["Jeremy Bolding"]
   s.email       = ["cyberchefjay@gmail.com"]
   s.homepage    = "https://www.rubygems.org/gems/bs3_helpers"

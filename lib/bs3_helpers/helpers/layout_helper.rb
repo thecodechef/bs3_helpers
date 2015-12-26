@@ -2,9 +2,27 @@
 module Bs3Helpers
 	module Helpers
 		module LayoutHelper
+			
+			def container(opts={},&block)
+				@classes = []
+				if opts[:fluid]
+					@classes << "container-fluid"
+					content_tag :div,'',class: @classes.join(' '),&block
+				else
+					@classes << "container"
+					content_tag :div,'',class: @classes.join(' '),&block
+				end
+			end
+
+			def row(&block)
+				@classes = []
+				@classes << "row"
+				content_tag :div,'',class: @classes.join(' '),&block
+			end
+
 			def grid(opts={},&block)
 				@grids         = %w{ col offset pull push }
-				@sizes         = %w{ xs sm md lg xl }
+				@sizes         = %w{ xs sm md lg }
 				index = 13
 
 				@sizes.each do |s| 
@@ -17,13 +35,12 @@ module Bs3Helpers
 				end
 				
 				@classes = []
-				
+
 				if opts[:full]
 					@classes << @col_xs_12 
 					@classes << @col_sm_12 
 					@classes << @col_md_12
 					@classes << @col_lg_12
-					@classes << @col_xl_12
 					content_tag :div,'',class: @classes.join(' '),&block
 				end
 

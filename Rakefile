@@ -15,8 +15,8 @@ end
 
 desc "Releases the Gem to rubygems.org."
 task :release => :build do  
-  system "gem push bs3_helpers-#{Bs3Helpers::VERSION}.gem"
-  system "git tag -a v#{Bs3Helpers::VERSION}"
+  system "gem push bs3_helpers-#{Bs3Helpers.version}.gem"
+  system "git tag -a v#{Bs3Helpers.version}"
   system "git push -u origin master --tags"
 end 
 

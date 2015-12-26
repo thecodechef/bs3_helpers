@@ -1,3 +1,7 @@
+require_relative 'gem_version'
+
 module Bs3Helpers
-  VERSION = "0.0.10"
+  def self.version
+    VERSION::STRING
+  end
 end
